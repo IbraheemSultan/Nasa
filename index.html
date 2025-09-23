@@ -5,66 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind cdn -->
     <link href="dist/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-400 text-white">
-    <header class="w-full h-20 bg-gray-800 flex items-center justify-between px-6">
-        <div class="logo"></div>
-        <nav class="">
-            <ul class="flex space-x-6">
-                <li class=""><a href="" class="hover:text-blue-600">Home</a></li>
-                <li class=""><a href="" class="hover:text-blue-600">Explore</a></li>
-                <li class=""><a href="" class="hover:text-blue-600">Compare</a></li>
-            </ul>
-        </nav>
-        <div class="search">
-            <input type="search" placeholder="Search..." class="rounded-md px-2 py-1 text-black border-2 border-gray-300 focus:outline-none focus:border-blue-500">
-            <!-- <button>Go</button> -->
+<body class="bg-firstSection text-white">
+
+    <!-- header -->
+    <header class="w-full md:w-11/12 md:rounded-b-4xl m-auto h-20 bg-header flex items-center justify-between    px-6">
+        <div class="logo flex justify-between items-center">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-xl  rounded-full p-2">
+                <i class="fa-solid fa-rocket "></i>
+            </div>
+            <span
+                class="font-bold text-xl uppercase ml-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent   ">NASA
+                Explorer </span>
         </div>
+        <div class="ml-20">
+            <nav class=" hidden lg:!flex ">
+                <ul class="flex space-x-6">
+                    <li class=""><a href="" class="hover:text-blue-600 font-semibold duration-300">Home</a></li>
+                    <li class=""><a href="" class="hover:text-blue-600 font-semibold duration-300">Explore</a></li>
+                    <li class=""><a href="" class="hover:text-blue-600 font-semibold duration-300">Compare</a></li>
+                    <li class=""><a href="" class="hover:text-blue-600 font-semibold duration-300">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search relative hidden md:!flex ">
+            <i class="fa-solid fa-magnifying-glass absolute top-3 left-3 text-gray-500 "></i>
+            <input type="search" placeholder="Search..." class="rounded-4xl px-10 py-2  text-sm border-1 border-gray-500 outline-0 focus:outline-none focus:border-blue-500">
+        </div>
+
+        <!-- Sultan: i will turn on menu later by js -->
+        <i class="fa-solid fa-bars lg:!hidden "></i>
     </header>
 
-    <section>
-        <h1>Explore Massive NASA Space Images</h1>
-        <p>Zoom into gigapixel datasets of Earth, Mars, the Moon, and galaxies.</p>
-        <p>Discover the universe in unprecedented detail with interactive exploration tools.</p>
-         <div>
-            <button>Explore Data</button>
-            <button>Watch Demo</button>
-         </div>
+    <!-- first section -->
+    <section class="text-center py-20 px-6 "> 
+        <div class="container md:w-9/12 text-center m-auto ">
+            <div class="bg-gradient-to-r  animate-bounce from-blue-400 to-50%   to-purple-400 bg-clip-text text-transparent inline-block pb-10 font-bold">
+                <h1 class="text-6xl md:text-8xl ">Explore Massive  NASA  Space Images</h1>
+            </div>
+            
+            <p class="text-3xl mt-4 text-gray-300">Zoom into gigapixel datasets of Earth, Mars, the Moon, and galaxies. <br> Discover the universe in unprecedented detail with interactive exploration tools.</p>
 
-         <div class="cards">
-            <div class="card1">
-                <h1>+50</h1>
-                <p>Gigapixel Images</p>
+            <!-- Sultan: remember to add icons for this button  -->
+            <div class="mt-8  md:space-x-6 flex-col md:flex-row  flex justify-center items-center">
+                <a href="#" class="text-2xl capitalize font-bold rounded-4xl  p-3 px-15 bg-gradient-to-r from-blue-600 to-purple-600  duration-500    hover:from-blue-700 hover:to-purple-700">Explore Data</a>
+                <a href="#" class="text-2xl capitalize font-bold rounded-4xl  mt-7 md:mt-0  p-3 px-15 border-2 border-blue-500 hover:bg-blue-600/15 duration-500  ">Watch Demo</a>
             </div>
 
-            <div class="card2">
-                <h1>15TB</h1>
-                <p>Total Data</p>
-            </div>
+            <div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                <div class="card1 bg-secondSection p-5 px-10 rounded-2xl border-1 border-gray-700">
+                    <h1 class="font-bold text-4xl text-blue-400">50+</h1>
+                    <p class="text-xl text-gray-300">Gigapixel Images</p>
+                </div>
 
-            <div class="card3">
-                <h1>25</h1>
-                <p>Spacecraft</p>
-            </div>
+                <div class="card2 bg-secondSection p-5 px-10 rounded-2xl border-1 border-gray-700">
+                    <h1 class="font-bold text-purple-400 text-4xl">15TB</h1>
+                    <p class="text-xl text-gray-300">Total Data</p>
+                </div>
 
-            <div class="card4">
-                <h1>100K+</h1>
-                <p>Users</p>
+                <div class="card3 bg-secondSection p-5 px-10 rounded-2xl border-1 border-gray-700">
+                    <h1 class="font-bold text-4xl text-fuchsia-400">25</h1>
+                    <p class="text-xl text-gray-300">Spacecraft</p>
+                </div>
+
+                <div class="card4 bg-secondSection p-5 px-10 rounded-2xl border-1 border-gray-700">
+                    <h1 class="font-bold text-4xl text-green-400">100K+</h1>
+                    <p class="text-xl text-gray-300">Users</p>
+                </div>
             </div>
-         </div>
+        </div>
     </section>
 
     <section>
         <h1>Explore Celestial Bodies</h1>
-        <p>Journey through our solar system and beyond with high-resolution imagery from NASA's most advanced spacecraft and telescopes.</p>
+        <p>Journey through our solar system and beyond with high-resolution imagery from NASA's most advanced spacecraft
+            and telescopes.</p>
 
         <div class="cards2">
             <div class="card5">
                 <img src="..." alt="...">
                 <h2>Earth Observatory</h2>
-                <p>Explore our home planet with satellite imagery, climate data, and environmental monitoring systems.</p>
+                <p>Explore our home planet with satellite imagery, climate data, and environmental monitoring systems.
+                </p>
                 <p>Resolution: Up to 30cm/pixel</p>
                 <p>Coverage: Global</p>
                 <button>Explore Earth</button>
@@ -103,12 +133,14 @@
 
     <section>
         <h1>Advanced Exploration Tools</h1>
-        <p>Powerful features designed for both casual explorers and professional researchers to analyze and interact with space data.</p>
+        <p>Powerful features designed for both casual explorers and professional researchers to analyze and interact
+            with space data.</p>
         <img src="..." alt="...">
 
         <div>
             <h1>Infinite Zoom Technology</h1>
-            <p>Experience seamless zooming from planetary scale down to meter-level detail with our advanced tiling system.</p>
+            <p>Experience seamless zooming from planetary scale down to meter-level detail with our advanced tiling
+                system.</p>
             <div>
                 <p>Gigapixel image rendering</p>
                 <p>Real-time performance optimization</p>
@@ -130,7 +162,8 @@
 
     <section>
         <h1>Professional Research Suite</h1>
-        <p>Advanced tools for scientists, researchers, and educators to conduct detailed analysis and create educational content.</p>
+        <p>Advanced tools for scientists, researchers, and educators to conduct detailed analysis and create educational
+            content.</p>
 
         <div class="cards">
             <div>
@@ -175,7 +208,8 @@
 
     <section>
         <h1>Mission Archives</h1>
-        <p>Explore data from NASA's most significant space missions, from historic Apollo landings to cutting-edge Mars exploration.</p>
+        <p>Explore data from NASA's most significant space missions, from historic Apollo landings to cutting-edge Mars
+            exploration.</p>
 
         <div>
             <div>
@@ -241,7 +275,8 @@
                     <h3>Interactive Tutorials</h3>
                     <p>Step-by-step guides for exploration</p>
                 </div>
-               <p>Learn how to navigate, analyze, and interpret space imagery with our comprehensive tutorial system.</p>
+                <p>Learn how to navigate, analyze, and interpret space imagery with our comprehensive tutorial system.
+                </p>
             </div>
 
 
@@ -251,7 +286,8 @@
                     <h3>Lesson Plans</h3>
                     <p>Ready-made curriculum for educators</p>
                 </div>
-               <p>Download classroom-ready materials aligned with educational standards for K-12 and university levels.</p>
+                <p>Download classroom-ready materials aligned with educational standards for K-12 and university levels.
+                </p>
             </div>
 
 
@@ -260,7 +296,8 @@
                     <h3>Community Projects</h3>
                     <p>Collaborative research initiatives</p>
                 </div>
-               <p>Join citizen science projects and contribute to real NASA research while learning about space exploration.</p>
+                <p>Join citizen science projects and contribute to real NASA research while learning about space
+                    exploration.</p>
             </div>
         </div>
     </section>
@@ -321,7 +358,8 @@
 
     <section>
         <h1>Start Your Space Journey</h1>
-        <p>Join thousands of explorers, researchers, and educators discovering the universe through NASA's most detailed space imagery.</p>
+        <p>Join thousands of explorers, researchers, and educators discovering the universe through NASA's most detailed
+            space imagery.</p>
 
         <buttun>Being Explore</buttun>
         <buttun>Learn More</buttun>
@@ -344,7 +382,7 @@
         </div>
     </section>
 
-    
+
 
 
 

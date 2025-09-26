@@ -37,27 +37,35 @@
             </nav>
         </div>
         <div class="search relative hidden md:!flex ">
-            <i class="fa-solid fa-magnifying-glass absolute top-3 left-3 text-gray-500 "></i>
-            <input type="search" placeholder="Search..." class="rounded-4xl px-10 py-2  text-sm border-1 border-gray-500 outline-0 focus:outline-none focus:border-blue-500">
+            <i class="fa-solid fa-magnifying-glass absolute  top-2 text-gray-400 left-0 px-4 py-1 rounded-2xl "></i>
+            <input type="search" placeholder="Search..."
+                class="rounded-4xl px-10 py-2  text-sm border-1 border-gray-500 outline-0 focus:outline-none focus:border-blue-500">
         </div>
 
         <!-- Sultan: i will turn on menu later by js -->
         <i class="fa-solid fa-bars lg:!hidden "></i>
     </header>
 
-    <!-- first section -->
-    <section class="text-center py-20 px-6 "> 
-        <div class="container md:w-9/12 text-center m-auto ">
-            <div class="bg-gradient-to-r  animate-bounce from-blue-400 to-50%   to-purple-400 bg-clip-text text-transparent inline-block pb-10 font-bold">
-                <h1 class="text-6xl md:text-8xl ">Explore Massive  NASA  Space Images</h1>
+    <!-- Main Section  -->
+    <section class="text-center py-10 px-6 lg:h-screen ">
+        <div class="container  ">
+            <div
+                class="bg-gradient-to-r  animate-bounce from-blue-400 to-50%   to-purple-400 bg-clip-text text-transparent inline-block pb-10 font-bold">
+                <h1 class="text-6xl md:text-8xl ">Explore Massive NASA Space Images</h1>
             </div>
-            
-            <p class="text-3xl mt-4 text-gray-300">Zoom into gigapixel datasets of Earth, Mars, the Moon, and galaxies. <br> Discover the universe in unprecedented detail with interactive exploration tools.</p>
+
+            <p class="text-3xl mt-4 text-gray-300">Zoom into gigapixel datasets of Earth, Mars, the Moon, and galaxies.
+                <br> Discover the universe in unprecedented detail with interactive exploration tools.
+            </p>
 
             <!-- Sultan: remember to add icons for this button  -->
             <div class="mt-8  md:space-x-6 flex-col md:flex-row  flex justify-center items-center">
-                <a href="#" class="text-2xl capitalize font-bold rounded-4xl  p-3 px-15 bg-gradient-to-r from-blue-600 to-purple-600  duration-500    hover:from-blue-700 hover:to-purple-700">Explore Data</a>
-                <a href="#" class="text-2xl capitalize font-bold rounded-4xl  mt-7 md:mt-0  p-3 px-15 border-2 border-blue-500 hover:bg-blue-600/15 duration-500  ">Watch Demo</a>
+                <a href="#"
+                    class="text-2xl capitalize font-bold rounded-4xl  p-3 px-15 bg-gradient-to-r from-blue-600 to-purple-600  duration-500    hover:from-blue-700 hover:to-purple-700">Explore
+                    Data</a>
+                <a href="#"
+                    class="text-2xl capitalize font-bold rounded-4xl  mt-7 md:mt-0  p-3 px-15 border-2 border-blue-500 hover:bg-blue-600/15 duration-500  ">Watch
+                    Demo</a>
             </div>
 
             <div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
@@ -84,226 +92,350 @@
         </div>
     </section>
 
-    <section>
-        <h1>Explore Celestial Bodies</h1>
-        <p>Journey through our solar system and beyond with high-resolution imagery from NASA's most advanced spacecraft
-            and telescopes.</p>
+    <!-- Explore Section -->
+    <section class="text-center py-10 px-6 bg-firstSection">
+        <div class="container ">
+            <h1
+                class="text-4xl bg-gradient-to-r from-blue-500 to-purple-500 text-transparent  bg-clip-text  inline-block font-bold ">
+                Explore Celestial Bodies</h1>
+            <p class="text-2xl mt-4 text-gray-300">Journey through our solar system and beyond with high-resolution
+                imagery from NASA's most advanced spacecraft
+                and telescopes.</p>
 
-        <div class="cards2">
-            <div class="card5">
-                <img src="..." alt="...">
-                <h2>Earth Observatory</h2>
-                <p>Explore our home planet with satellite imagery, climate data, and environmental monitoring systems.
-                </p>
-                <p>Resolution: Up to 30cm/pixel</p>
-                <p>Coverage: Global</p>
-                <button>Explore Earth</button>
-            </div>
-
-            <div class="card6">
-                <img src="..." alt="...">
-                <h2>Red Planet</h2>
-                <p>Journey across Martian landscapes with rover imagery and orbital reconnaissance data.</p>
-                <p>Resolution: Up to 25cm/pixel</p>
-                <p>Rovers: 5 Active</p>
-                <button>Explore Mars</button>
-            </div>
-
-            <div class="card7">
-                <img src="..." alt="...">
-                <h2>Lunar Surface</h2>
-                <p>Discover the Moon's surface with detailed crater maps and Apollo mission landing sites.</p>
-                <p>Resolution: Up to 50cm/pixel</p>
-                <p>Apollo Sites: 6 Mapped</p>
-                <button>Explore Moon</button>
-            </div>
-
-            <div class="card8">
-                <img src="..." alt="...">
-                <h2>Deep Space</h2>
-                <p>Venture into the cosmos with Hubble and Webb telescope imagery of distant galaxies and nebulae.</p>
-                <p>Telescopes: Hubble, Webb</p>
-                <p>Objects: 10,000+</p>
-                <button>Explore Universe</button>
-            </div>
-        </div>
-    </section>
-
-
-
-    <section>
-        <h1>Advanced Exploration Tools</h1>
-        <p>Powerful features designed for both casual explorers and professional researchers to analyze and interact
-            with space data.</p>
-        <img src="..." alt="...">
-
-        <div>
-            <h1>Infinite Zoom Technology</h1>
-            <p>Experience seamless zooming from planetary scale down to meter-level detail with our advanced tiling
-                system.</p>
-            <div>
-                <p>Gigapixel image rendering</p>
-                <p>Real-time performance optimization</p>
-                <p>Progressive loading</p>
-            </div>
-        </div>
-
-        <div>
-            <h1>AI-Powered Search</h1>
-            <p>Use natural language to find specific features, locations, and phenomena across our entire dataset.</p>
-            <div>
-                <p>Natural language queries</p>
-                <p>Feature recognition</p>
-                <p>Smart recommendations</p>
-            </div>
-        </div>
-    </section>
-
-
-    <section>
-        <h1>Professional Research Suite</h1>
-        <p>Advanced tools for scientists, researchers, and educators to conduct detailed analysis and create educational
-            content.</p>
-
-        <div class="cards">
-            <div>
-                <h2>Measurement Tools</h2>
-                <p>Precise distance, area, and volume calculations with coordinate system support.</p>
-
-                <div>
-                    <p>Distance measurement</p>
-                    <p>Area calculation</p>
-                    <p>Elevation profiling</p>
-                    <p>Coordinate systems</p>
-                </div>
-            </div>
-
-            <div>
-                <h2>Annotation System</h2>
-                <p>Label features, create notes, and collaborate with other researchers.</p>
-
-                <div>
-                    <p>Feature labeling</p>
-                    <p>Collaborative notes</p>
-                    <p>Export annotations</p>
-                    <p>Version control</p>
-                </div>
-            </div>
-
-
-            <div>
-                <h2>Data Export</h2>
-                <p>Download high-resolution sections and metadata for external analysis.</p>
-
-                <div>
-                    <p>Custom resolution</p>
-                    <p>Multiple formats</p>
-                    <p>Metadata inclusion</p>
-                    <p>Batch processing</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section>
-        <h1>Mission Archives</h1>
-        <p>Explore data from NASA's most significant space missions, from historic Apollo landings to cutting-edge Mars
-            exploration.</p>
-
-        <div>
-            <div>
-                <div>
-                    <img src="..." alt="...">
-                    <div>
-                        <h4>Historic Mission</h4>
+            <div class="cards2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                <div
+                    class="card5 rounded-2xl overflow-hidden bg-card border-1 border-gray-700 hover:shadow-2xl duration-500 hover:-translate-y-2">
+                    <div class="relative h-60">
+                        <img src="img/Earth.jpg" alt="..." class="h-full w-full">
+                        <p class="absolute bg-blue-500 top-7 left-7 px-4 py-1 rounded-2xl ">Earth</p>
+                    </div>
+                    <div class=" m-auto  !text-left  p-7">
+                        <h2 class="text-3xl font-bold text-blue-400 ">Earth Observatory</h2>
+                        <p class=" mt-4  text-gray-300  font-semibold">Explore our home planet with satellite imagery,
+                            climate data,
+                            and environmental monitoring
+                            systems.
+                        </p>
+                        <p class="mt-4 text-gray-400">Resolution: Up to 30cm/pixel</p>
+                        <p class="text-gray-400">Coverage: Global</p>
+                        <a href="#"
+                            class="!text-center  py-3 w-full block rounded-xl bg-blue-600 hover:bg-blue-800 duration-500 font-bold mt-4">Explore
+                            Earth</a>
                     </div>
                 </div>
-                <h3>Apollo Program</h3>
-                <p>Lunar surface imagery and landing site documentation from all six successful Apollo missions.</p>
-                <p>1969-1972</p>
-                <button>Explore</button>
-            </div>
 
-
-            <div>
-                <div>
-                    <img src="..." alt="...">
-                    <div>
-                        <h4>Active Mission</h4>
+                <div
+                    class=" card6 rounded-2xl overflow-hidden bg-card border-1 border-gray-700 hover:shadow-2xl duration-500 hover:-translate-y-2">
+                    <div class="relative h-60">
+                        <img src="img/Marth.jpg" alt="..." class="h-full w-full">
+                        <p class="absolute bg-red-500 top-7 left-7 px-4 py-1 rounded-2xl">Mars</p>
+                    </div>
+                    <div class=" !text-left  p-7 ">
+                        <h2 class="text-3xl font-bold text-red-400 ">Red Planet</h2>
+                        <p class=" mt-4  text-gray-300 font-semibold">Journey across Martian landscapes with rover
+                            imagery and orbital
+                            reconnaissance data.</p>
+                        <p class="mt-4 text-gray-400">Resolution: Up to 25cm/pixel</p>
+                        <p class="text-gray-400">Rovers: 5 Active</p>
+                        <a class="!text-center py-3 w-full block rounded-xl bg-red-600 font-bold mt-4 hover:bg-red-800 duration-500"
+                            href="#">Explore
+                            Mars</a>
                     </div>
                 </div>
-                <h3>Mars 2020</h3>
-                <p>Latest imagery from Perseverance rover including sample collection sites and helicopter flights.</p>
-                <p>2021-Present</p>
-                <button>Explore</button>
-            </div>
 
-            <div>
-                <div>
-                    <img src="..." alt="...">
-                    <div>
-                        <h4>Observatory</h4>
+                <div
+                    class="card7 rounded-2xl overflow-hidden bg-card border-1 border-gray-700 hover:shadow-2xl duration-500 hover:-translate-y-2 ">
+                    <div class="relative h-60">
+                        <img src="img/Moon.jpg" alt="..." class="h-full w-full">
+                        <p class="absolute bg-gray-500 top-7 left-7 px-4 py-1 rounded-2xl">Moon</p>
+                    </div>
+                    <div class="!text-left  p-7">
+                        <h2 class="text-3xl font-bold text-gray-400 ">Lunar Surface</h2>
+                        <p class=" mt-4  text-gray-300 font-semibold">Discover the Moon's surface with detailed crater
+                            maps and Apollo mission landing sites.</p>
+                        <p class="mt-4 text-gray-400">Resolution: Up to 50cm/pixel</p>
+                        <p class="text-gray-400">Apollo Sites: 6 Mapped</p>
+                        <a class="!text-center py-3 w-full block rounded-xl bg-gray-600 font-bold mt-4 hover:bg-gray-800 duration-500"
+                            href="#">Explore Moon</a>
                     </div>
                 </div>
-                <h3>Hubble Space Telescope</h3>
-                <p>Over 30 years of deep space observations including galaxies, nebulae, and stellar formations.</p>
-                <p>1990-Present</p>
-                <button>Explore</button>
-            </div>
 
-        </div>
-    </section>
-
-
-    <section>
-        <h1>Educational Resources</h1>
-        <p>Comprehensive learning materials for students, educators, and space enthusiasts of all levels.</p>
-
-        <div>
-            <img src="..." alt="...">
-        </div>
-
-        <div>
-            <h4>Join 50,000+ Educators</h4>
-            <p>Already using our platform for space science education</p>
-        </div>
-
-        <div>
-            <div>
-                <div>
-                    <h3>Interactive Tutorials</h3>
-                    <p>Step-by-step guides for exploration</p>
+                <div
+                    class="card8 rounded-2xl overflow-hidden bg-card border-1 border-gray-700 hover:shadow-2xl duration-500 hover:-translate-y-2 ">
+                    <div class="relative h-60 ">
+                        <img src="img/Galaxy.jpg" alt="..." class="h-full w-full">
+                        <p class="absolute bg-purple-500 top-7 left-7 px-4 py-1 rounded-2xl">Deep Space</p>
+                    </div>
+                    <div class="!text-left  p-7 bg-card  ">
+                        <h2 class="text-3xl font-bold text-purple-400 ">Deep Space</h2>
+                        <p class=" mt-4  text-gray-300 font-semibold">Venture into the cosmos with Hubble and Webb
+                            telescope imagery of distant galaxies and
+                            nebulae.
+                        </p>
+                        <p class="mt-4 text-gray-400">Telescopes: Hubble, Webb</p>
+                        <p class="text-gray-400">Objects: 10,000+</p>
+                        <a class="!text-center py-3 w-full block rounded-xl bg-purple-600 font-bold mt-4 hover:bg-purple-800 duration-500"
+                            href="#">Explore Universe</a>
+                    </div>
                 </div>
-                <p>Learn how to navigate, analyze, and interpret space imagery with our comprehensive tutorial system.
-                </p>
-            </div>
-
-
-
-            <div>
-                <div>
-                    <h3>Lesson Plans</h3>
-                    <p>Ready-made curriculum for educators</p>
-                </div>
-                <p>Download classroom-ready materials aligned with educational standards for K-12 and university levels.
-                </p>
-            </div>
-
-
-            <div>
-                <div>
-                    <h3>Community Projects</h3>
-                    <p>Collaborative research initiatives</p>
-                </div>
-                <p>Join citizen science projects and contribute to real NASA research while learning about space
-                    exploration.</p>
             </div>
         </div>
     </section>
 
 
-    <section>
+    <!-- Advanced Tools Section  -->
+    <section class="bg-secondSection py-10 ">
+        <div class="container">
+
+            <h1
+                class="text-4xl font-bold bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text inline-block ">
+                Advanced Exploration Tools</h1>
+            <p class="text-gray-400 font-semibold mt-4 text-xl">Powerful features designed for both casual explorers and
+                professional researchers to analyze and interact
+                with space data.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-card-2  border-1 border-gray-700 p-7 mt-4 rounded-2xl !text-left">
+                    <h1 class="text-2xl font-bold text-blue-400 align-middle">Infinite Zoom Technology</h1>
+                    <p class="text-gray-300 font-semibold mt-4">Experience seamless zooming from planetary scale down to
+                        meter-level detail with our advanced tiling
+                        system.</p>
+                    <div class="mt-4">
+                        <p class="text-gray-400 pl-2">Gigapixel image rendering</p>
+                        <p class="text-gray-400 pl-2">Real-time performance optimization</p>
+                        <p class="text-gray-400 pl-2">Progressive loading</p>
+                    </div>
+                </div>
+
+                <div class="bg-card-2  border-1 border-gray-700 p-7 mt-4 rounded-2xl !text-left">
+                    <h1 class="text-2xl font-bold text-purple-400 align-middle">AI-Powered Search</h1>
+                    <p class="text-gray-300 font-semibold mt-4">Use natural language to find specific features,
+                        locations, and phenomena across our entire
+                        dataset.</p>
+                    <div class="mt-4">
+                        <p class="text-gray-400 pl-2">Natural language queries</p>
+                        <p class="text-gray-400 pl-2">Feature recognition</p>
+                        <p class="text-gray-400 pl-2">Smart recommendations</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Time-Based Section -->
+    <section class="bg-firstSection py-10">
+        <div class="container">
+            <h2 class=" bg-text from-yellow-500 to-orange-500 font-bold text-4xl">Time-Based Analysis</h2>
+            <p class="text-gray-300 font-semibold mt-4 text-xl">Compare the same locations across different time periods
+                and observe changes in planetary surfaces, weather patterns, and cosmic events.</p>
+            <div class="bg-card-2  rounded-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-7 p-7">
+                <div class="text-center">
+                    <h3 class="bg-text bg-yellow-500 font-semibold text-xl">Temporal Comparison</h3>
+                    <p class="text-gray-300">Compare images taken years apart to observe planetary changes</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="bg-text bg-green-500 font-semibold text-xl  mt-4 md:mt-0">Multi-Spectral Overlay</h3>
+                    <p class="text-gray-300">Layer different wavelengths to reveal hidden features</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="bg-text bg-purple-500 font-semibold text-xl mt-4 lg:mt-0">Data Analytics</h3>
+                    <p class="text-gray-300">Analyze trends and patterns with built-in measurement tools</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Section  -->
+    <section class="bg-secondSection py-10">
+        <div class="container">
+
+            <h2 class=" from-blue-400 to-blue-500 bg-text text-4xl font-bold">Professional Research Suite</h2>
+            <p class="text-gray-300 mt-4 font-semibold text-xl ">Advanced tools for scientists, researchers, and
+                educators to conduct detailed analysis and create educational
+                content.</p>
+
+            <div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+                <div class="bg-card-2 !text-left p-7 rounded-2xl  hover:shadow-2xl duration-500 hover:-translate-y-1">
+                    <h2 class="bg-text font-bold text-2xl from-blue-300 to-blue-400 ">Measurement Tools</h2>
+                    <p class="mt-4 text-gray-300 font-semibold text-xl">Precise distance, area, and volume calculations
+                        with
+                        coordinate system support.</p>
+
+                    <div class="mt-4">
+                        <p class="text-gray-400">Distance measurement</p>
+                        <p class="text-gray-400">Area calculation</p>
+                        <p class="text-gray-400">Elevation profiling</p>
+                        <p class="text-gray-400">Coordinate systems</p>
+                    </div>
+                </div>
+
+                <div class="bg-card-2 !text-left p-7 rounded-2xl  hover:shadow-2xl duration-500 hover:-translate-y-1">
+                    <h2 class="bg-text font-bold text-2xl from-purple-400 to-purple-500 ">Annotation System</h2>
+                    <p class="mt-4 text-gray-300 font-semibold text-xl">Label features, create notes, and collaborate
+                        with other researchers.</p>
+
+                    <div class="mt-4">
+                        <p class="text-gray-400">Feature labeling</p>
+                        <p class="text-gray-400">Collaborative notes</p>
+                        <p class="text-gray-400">Export annotations</p>
+                        <p class="text-gray-400">Version control</p>
+                    </div>
+                </div>
+
+
+                <div class="bg-card-2 !text-left p-7 rounded-2xl  hover:shadow-2xl duration-500 hover:-translate-y-1">
+                    <h2 class="bg-text font-bold text-2xl from-green-400 to-green-500 ">Data Export</h2>
+                    <p class="mt-4 text-gray-300 font-semibold text-xl">Download high-resolution sections and metadata
+                        for external analysis.</p>
+
+                    <div>
+                        <p class="text-gray-400">Custom resolution</p>
+                        <p class="text-gray-400">Multiple formats</p>
+                        <p class="text-gray-400">Metadata inclusion</p>
+                        <p class="text-gray-400">Batch processing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Archives Section  -->
+    <section class="bg-firstSection py-10">
+        <div class="container">
+
+            <h1 class="bg-text from-orange-400 to-orange-500 font-bold text-4xl">Mission Archives</h1>
+            <p class="text-xl text-gray-300 font-semibold mt-4  ">Explore data from NASA's most significant space
+                missions, from historic Apollo landings to cutting-edge
+                Mars
+                exploration.</p>
+
+            <div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+
+                <div
+                    class="bg-card-2 !text-left rounded-2xl  overflow-hidden hover:shadow-2xl duration-500 hover:-translate-y-1 relative">
+                    <div class="relative w-full h-50 ">
+                        <img src="img/Earth.jpg" alt="..." class="w-full h-full">
+                        <p class="absolute font-semibold bg-yellow-600 bottom-4 left-4  rounded-2xl text-sm px-3 py-1">
+                            Historic Mission</p>
+                    </div>
+                    <div class=" p-7 ">
+                        <h3 class=" text-2xl text-yellow-400 font-bold ">Apollo Program</h3>
+                        <p class="mt-4 text-gray-300 ">Lunar surface imagery and landing site documentation from all six
+                            successful Apollo missions.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <p class="text-sm text-gray-400">1969-1972</p>
+                            <a href="#" class="px-5 py-2 bg-yellow-600 rounded-xl hover:bg-yellow-700">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-card-2 !text-left rounded-2xl  overflow-hidden hover:shadow-2xl duration-500 hover:-translate-y-1 relative">
+                    <div class="relative w-full h-50 ">
+                        <img src="img/Earth.jpg" alt="..." class="w-full h-full">
+                        <p class="absolute font-semibold bg-red-600 bottom-4 left-4  rounded-2xl text-sm px-3 py-1">
+                            Active Mission</p>
+                    </div>
+                    <div class="p-7">
+                        <h3 class=" text-2xl text-red-400 font-bold ">Mars 2020</h3>
+                        <p class="mt-4 text-gray-300 ">Latest imagery from Perseverance rover including sample
+                            collection sites and helicopter
+                            flights.
+                        </p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <p class="text-sm text-gray-400">2021-Present</p>
+                            <a href="#" class="px-5 py-2 bg-red-600 rounded-xl hover:bg-red-700">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-card-2 !text-left rounded-2xl  overflow-hidden hover:shadow-2xl duration-500 hover:-translate-y-1 relative">
+                    <div class="relative w-full h-50 ">
+                        <img src="img/Earth.jpg" alt="..." class="w-full h-full">
+                        <p class="absolute font-semibold bg-purple-600 bottom-4 left-4  rounded-2xl text-sm px-3 py-1">
+                            Observatory</p>
+                    </div>
+                    <div class="p-7">
+                        <h3 class=" text-2xl text-purple-400 font-bold ">Hubble Space Telescope</h3>
+                        <p class="mt-4 text-gray-300 ">Over 30 years of deep space observations including galaxies,
+                            nebulae, and stellar formations.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <p class="text-sm text-gray-400">1990-Present</p>
+                            <a href="#" class="px-5 py-2 bg-purple-600 rounded-xl hover:bg-purple-700">Explore</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Eduction Resources Section  -->
+    <section class="bg-secondSection py-10">
+        <div class="container ">
+            <h1 class="bg-text from-emerald-400 to-cyan-400 font-bold text-5xl  ">Educational Resources</h1>
+            <p class="text-gray-300 font-semibold text-xl mt-4">Comprehensive learning materials for students,
+                educators, and space enthusiasts of all levels.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 !text-left py-5">
+
+                <div class="grid grid-cols-1 gap-7">
+                    <div class="bg-card-2 rounded-2xl border-1 border-gray-700 px-7 py-4 ">
+                        <div>
+                            <h3 class="text-2xl text-blue-400 font-bold ">Interactive Tutorials</h3>
+                            <p class="mt-1 text-gray-500">Step-by-step guides for exploration</p>
+                        </div>
+                        <p class="text-gray-300 mt-2">Learn how to navigate, analyze, and interpret space imagery with
+                            our comprehensive tutorial
+                            system.
+                        </p>
+                    </div>
+
+
+
+                    <div class="bg-card-2 rounded-2xl border-1 border-gray-700 px-7 py-4 ">
+                        <div>
+                            <h3 class="text-2xl text-green-400 font-bold ">Lesson Plans</h3>
+                            <p class="mt-1 text-gray-500">Ready-made curriculum for educators</p>
+                        </div>
+                        <p class="text-gray-300 mt-2">Download classroom-ready materials aligned with educational
+                            standards for K-12 and university
+                            levels.
+                        </p>
+                    </div>
+
+
+                    <div class="bg-card-2 rounded-2xl border-1 border-gray-700 px-7 py-4 ">
+                        <div>
+                            <h3 class="text-2xl text-purple-400 font-bold ">Community Projects</h3>
+                            <p class="mt-1 text-gray-500">Collaborative research initiatives</p>
+                        </div>
+                        <p class="text-gray-300 mt-2">Join citizen science projects and contribute to real NASA research
+                            while learning about space
+                            exploration.</p>
+                    </div>
+                </div>
+
+                <div class="relative flex items-center">
+                    <div class="bg-card-2 rounded-2xl border-1 border-gray-700 p-7  h-10/12 w-full ">
+                        <img src="img/Earth.jpg" alt="..." class="rounded-xl w-full h-full">
+                    </div>
+
+                    <div
+                        class="absolute right-0 bottom-0 p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl w-7/12 translate-x-20">
+                        <h4 class="font-blod text-xl"> Join 50,000+ Educators</h4>
+                        <p class="mt-2 text-gray-300">Already using our platform for space science education</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section>
         <h1>Platform Impact</h1>
         <p>See how our platform is advancing space exploration education and research worldwide.</p>
 
@@ -353,11 +485,11 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
 
 
-    <section>
-        <h1>Start Your Space Journey</h1>
+    <!-- <section>
+        <h1>Sta rt Your Space Journey</h1>
         <p>Join thousands of explorers, researchers, and educators discovering the universe through NASA's most detailed
             space imagery.</p>
 
@@ -380,8 +512,72 @@
                 <p>Expert assistance available</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
+
+    <footer class="bg-card border-t-1 border-gray-700 py-10">
+        <div class="container !text-left">
+
+            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5">
+                <div class="flex flex-col">
+                    <div class="logo flex  items-center">
+                        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-xl  rounded-full p-2">
+                            <i class="fa-solid fa-rocket "></i>
+                        </div>
+                        <span
+                            class="font-bold text-xl uppercase ml-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent   ">NASA
+                            Explorer </span>
+                    </div>
+                    <p class="text-gray-300 font-semibold mt-4 ">Democratizing access to NASA's vast collection of space
+                        imagery through innovative web technology and intuitive user interfaces.</p>
+                    <div class="linkes flex mt-4"></div>
+                </div>
+
+                <div class="m-auto">
+                    <h4 class="font-bold text-xl">Explore</h4>
+                    <ul class="mt-4">
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Earth Observatory</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Mars Surface</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Lunar Missions</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Deep Space</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Solar System</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-auto">
+                    <h4 class="font-bold text-xl">Resources</h4>
+                    <ul class="mt-4">
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> API Documentation</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Educational Materials</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Research Papers</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Help Center</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Community Forum</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- <hr class="text-gray-700 my-5"> -->
+        </div>
+    </footer>
 
 
 

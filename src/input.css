@@ -16,7 +16,7 @@
   @apply bg-gradient-to-r text-transparent bg-clip-text inline-block 
 }
 .container {
-  @apply md:w-10/12 text-center m-auto
+  @apply w-11/12  md:w-10/12 text-center m-auto
 }
 
 

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nasa Explorer</title>
+
     <!-- Fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -17,7 +18,8 @@
 <body class="bg-firstSection text-white">
 
     <!-- header -->
-    <header class="w-full md:w-11/12 md:rounded-b-4xl m-auto h-20 bg-header flex items-center justify-between    px-6">
+    <header
+        class="w-full md:w-11/12 md:rounded-b-4xl m-auto h-20 bg-header flex items-center justify-between    px-6 absolute md:left-1/24 z-50">
         <div class="logo flex justify-between items-center">
             <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-xl  rounded-full p-2">
                 <i class="fa-solid fa-rocket "></i>
@@ -47,44 +49,53 @@
     </header>
 
     <!-- Main Section  -->
-    <section class="text-center py-10 px-6 lg:h-screen ">
-        <div class="container  ">
-            <div
-                class="bg-gradient-to-r  animate-bounce from-blue-400 to-50%   to-purple-400 bg-clip-text text-transparent inline-block pb-10 font-bold">
-                <h1 class="text-6xl md:text-8xl ">Explore Massive NASA Space Images</h1>
+    <section
+        class="relative text-center lg:min-h-screen bg-[url('/img/bg.png')] bg-no-repeat bg-cover bg-center flex items-center justify-center">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gray-500/20"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 container py-20 px-4">
+            <div class=" animate-bounce from-blue-400 to-purple-400  bg-text pb-10 font-bold">
+                <h1 class="text-4xl md:text-6xl lg:text-8xl">Explore Massive NASA Space Images</h1>
             </div>
 
-            <p class="text-3xl mt-4 text-gray-300">Zoom into gigapixel datasets of Earth, Mars, the Moon, and galaxies.
-                <br> Discover the universe in unprecedented detail with interactive exploration tools.
+            <p class="text-lg md:text-2xl text-gray-300">
+                Zoom into gigapixel datasets of Earth, Mars, the Moon, and galaxies.<br>
+                Discover the universe in unprecedented detail with interactive exploration tools.
             </p>
 
-            <!-- Sultan: remember to add icons for this button  -->
-            <div class="mt-8  md:space-x-6 flex-col md:flex-row  flex justify-center items-center">
+            <!-- Buttons -->
+            <div class="mt-8 flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6">
                 <a href="#"
-                    class="text-2xl capitalize font-bold rounded-4xl  p-3 px-15 bg-gradient-to-r from-blue-600 to-purple-600  duration-500    hover:from-blue-700 hover:to-purple-700">Explore
-                    Data</a>
+                    class="text-xl md:text-2xl capitalize font-semibold rounded-4xl p-3 px-10 bg-gradient-to-r from-blue-600 to-purple-600 duration-500 hover:from-blue-700 hover:to-purple-700">
+                    Explore Data
+                </a>
                 <a href="#"
-                    class="text-2xl capitalize font-bold rounded-4xl  mt-7 md:mt-0  p-3 px-15 border-2 border-blue-500 hover:bg-blue-600/15 duration-500  ">Watch
-                    Demo</a>
+                    class="text-xl md:text-2xl capitalize font-semibold rounded-4xl p-3 px-8 border-2 border-blue-500 hover:bg-blue-600/15 duration-500">
+                    <i class="fa-solid fa-play mr-2"></i> Watch Demo
+                </a>
             </div>
 
-            <div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-                <div class="card1 bg-secondSection p-5 px-10 rounded-2xl border-1 border-gray-700">
+            <!-- Cards -->
+            <div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <div class="card1 bg-secondSection p-5 px-10 rounded-2xl border border-gray-700">
                     <h1 class="font-bold text-4xl text-blue-400">50+</h1>
                     <p class="text-xl text-gray-300">Gigapixel Images</p>
                 </div>
 
-                <div class="card2 bg-secondSection p-5 px-10 rounded-2xl border-1 border-gray-700">
-                    <h1 class="font-bold text-purple-400 text-4xl">15TB</h1>
+                <div class="card2 bg-secondSection p-5 px-10 rounded-2xl border border-gray-700">
+                    <h1 class="font-bold text-4xl text-purple-400">15TB</h1>
                     <p class="text-xl text-gray-300">Total Data</p>
                 </div>
 
-                <div class="card3 bg-secondSection p-5 px-10 rounded-2xl border-1 border-gray-700">
+                <div class="card3 bg-secondSection p-5 px-10 rounded-2xl border border-gray-700">
                     <h1 class="font-bold text-4xl text-fuchsia-400">25</h1>
                     <p class="text-xl text-gray-300">Spacecraft</p>
                 </div>
 
-                <div class="card4 bg-secondSection p-5 px-10 rounded-2xl border-1 border-gray-700">
+                <div class="card4 bg-secondSection p-5 px-10 rounded-2xl border border-gray-700">
                     <h1 class="font-bold text-4xl text-green-400">100K+</h1>
                     <p class="text-xl text-gray-300">Users</p>
                 </div>
@@ -92,13 +103,15 @@
         </div>
     </section>
 
+
     <!-- Explore Section -->
-    <section class="text-center py-10 px-6 bg-firstSection">
+    <section class="text-center py-10  bg-firstSection">
         <div class="container ">
             <h1
-                class="text-4xl bg-gradient-to-r from-blue-500 to-purple-500 text-transparent  bg-clip-text  inline-block font-bold ">
+                class="text-5xl bg-gradient-to-r from-blue-500 to-purple-500 text-transparent  bg-clip-text  inline-block font-bold ">
                 Explore Celestial Bodies</h1>
-            <p class="text-2xl mt-4 text-gray-300">Journey through our solar system and beyond with high-resolution
+            <p class="text-2xl mt-4 text-gray-300 w-10/12 m-auto">Journey through our solar system and beyond with
+                high-resolution
                 imagery from NASA's most advanced spacecraft
                 and telescopes.</p>
 
@@ -107,19 +120,24 @@
                     class="card5 rounded-2xl overflow-hidden bg-card border-1 border-gray-700 hover:shadow-2xl duration-500 hover:-translate-y-2">
                     <div class="relative h-60">
                         <img src="img/Earth.jpg" alt="..." class="h-full w-full">
-                        <p class="absolute bg-blue-500 top-7 left-7 px-4 py-1 rounded-2xl ">Earth</p>
+                        <p class="absolute bg-blue-700 top-4 left-4 px-2 text-sm py-1 rounded-2xl "><i
+                                class="fa-solid fa-globe mr-2"></i>Earth</p>
                     </div>
-                    <div class=" m-auto  !text-left  p-7">
+                    <div class=" m-auto  !text-left min-h-90 flex flex-col justify-between p-7">
                         <h2 class="text-3xl font-bold text-blue-400 ">Earth Observatory</h2>
                         <p class=" mt-4  text-gray-300  font-semibold">Explore our home planet with satellite imagery,
                             climate data,
                             and environmental monitoring
                             systems.
                         </p>
-                        <p class="mt-4 text-gray-400">Resolution: Up to 30cm/pixel</p>
-                        <p class="text-gray-400">Coverage: Global</p>
+                        <div>
+
+                            <p class="mt-4 text-gray-400">Resolution: Up to 30cm/pixel</p>
+                            <p class="text-gray-400">Coverage: Global</p>
+                        </div>
                         <a href="#"
-                            class="!text-center  py-3 w-full block rounded-xl bg-blue-600 hover:bg-blue-800 duration-500 font-bold mt-4">Explore
+                            class="!text-center  py-3 w-full block rounded-xl bg-blue-600 hover:bg-blue-800 duration-500 font-bold mt-4">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-4"></i>Explore
                             Earth</a>
                     </div>
                 </div>
@@ -128,17 +146,22 @@
                     class=" card6 rounded-2xl overflow-hidden bg-card border-1 border-gray-700 hover:shadow-2xl duration-500 hover:-translate-y-2">
                     <div class="relative h-60">
                         <img src="img/Marth.jpg" alt="..." class="h-full w-full">
-                        <p class="absolute bg-red-500 top-7 left-7 px-4 py-1 rounded-2xl">Mars</p>
+                        <p class="absolute bg-red-700 top-4 left-4 px-2 text-sm py-1  rounded-2xl "><i
+                                class="fa-solid fa-meteor mt-2"></i> Mars</p>
                     </div>
-                    <div class=" !text-left  p-7 ">
+                    <div class=" !text-left min-h-90 flex flex-col justify-between   p-7 ">
                         <h2 class="text-3xl font-bold text-red-400 ">Red Planet</h2>
                         <p class=" mt-4  text-gray-300 font-semibold">Journey across Martian landscapes with rover
                             imagery and orbital
                             reconnaissance data.</p>
-                        <p class="mt-4 text-gray-400">Resolution: Up to 25cm/pixel</p>
-                        <p class="text-gray-400">Rovers: 5 Active</p>
+                        <div>
+
+                            <p class="mt-4 text-gray-400">Resolution: Up to 25cm/p
+                                ixel</p>
+                            <p class="text-gray-400">Rovers: 5 Active</p>
+                        </div>
                         <a class="!text-center py-3 w-full block rounded-xl bg-red-600 font-bold mt-4 hover:bg-red-800 duration-500"
-                            href="#">Explore
+                            href="#"><i class="fa-solid fa-magnifying-glass-plus mr-4"></i> Explore
                             Mars</a>
                     </div>
                 </div>
@@ -147,16 +170,21 @@
                     class="card7 rounded-2xl overflow-hidden bg-card border-1 border-gray-700 hover:shadow-2xl duration-500 hover:-translate-y-2 ">
                     <div class="relative h-60">
                         <img src="img/Moon.jpg" alt="..." class="h-full w-full">
-                        <p class="absolute bg-gray-500 top-7 left-7 px-4 py-1 rounded-2xl">Moon</p>
+                        <p class="absolute bg-gray-700 top-4 left-4 px-2 text-sm py-1 rounded-2xl "><i
+                                class="fa-solid fa-moon mr-2"></i>Moon</p>
                     </div>
-                    <div class="!text-left  p-7">
+                    <div class="!text-left min-h-90 flex flex-col justify-between   p-7">
                         <h2 class="text-3xl font-bold text-gray-400 ">Lunar Surface</h2>
                         <p class=" mt-4  text-gray-300 font-semibold">Discover the Moon's surface with detailed crater
                             maps and Apollo mission landing sites.</p>
-                        <p class="mt-4 text-gray-400">Resolution: Up to 50cm/pixel</p>
-                        <p class="text-gray-400">Apollo Sites: 6 Mapped</p>
+                        <div>
+
+                            <p class="mt-4 text-gray-400">Resolution: Up to 50cm/pixel</p>
+                            <p class="text-gray-400">Apollo Sites: 6 Mapped</p>
+                        </div>
+
                         <a class="!text-center py-3 w-full block rounded-xl bg-gray-600 font-bold mt-4 hover:bg-gray-800 duration-500"
-                            href="#">Explore Moon</a>
+                            href="#"><i class="fa-solid fa-magnifying-glass-plus mr-4"></i> Explore Moon</a>
                     </div>
                 </div>
 
@@ -164,18 +192,22 @@
                     class="card8 rounded-2xl overflow-hidden bg-card border-1 border-gray-700 hover:shadow-2xl duration-500 hover:-translate-y-2 ">
                     <div class="relative h-60 ">
                         <img src="img/Galaxy.jpg" alt="..." class="h-full w-full">
-                        <p class="absolute bg-purple-500 top-7 left-7 px-4 py-1 rounded-2xl">Deep Space</p>
+                        <p class="absolute bg-purple-700 top-4 left-4 px-2 text-sm py-1 rounded-2xl "><i
+                                class="fa-solid fa-satellite mr-2"></i>Deep Space</p>
                     </div>
-                    <div class="!text-left  p-7 bg-card  ">
+                    <div class="!text-left min-h-90 flex flex-col justify-between   p-7 bg-card  ">
                         <h2 class="text-3xl font-bold text-purple-400 ">Deep Space</h2>
                         <p class=" mt-4  text-gray-300 font-semibold">Venture into the cosmos with Hubble and Webb
                             telescope imagery of distant galaxies and
                             nebulae.
                         </p>
-                        <p class="mt-4 text-gray-400">Telescopes: Hubble, Webb</p>
-                        <p class="text-gray-400">Objects: 10,000+</p>
+                        <div>
+
+                            <p class="mt-4 text-gray-400">Telescopes: Hubble, Webb</p>
+                            <p class="text-gray-400">Objects: 10,000+</p>
+                        </div>
                         <a class="!text-center py-3 w-full block rounded-xl bg-purple-600 font-bold mt-4 hover:bg-purple-800 duration-500"
-                            href="#">Explore Universe</a>
+                            href="#"><i class="fa-solid fa-magnifying-glass-plus mr-4"></i> Explore Universe</a>
                     </div>
                 </div>
             </div>
@@ -188,35 +220,63 @@
         <div class="container">
 
             <h1
-                class="text-4xl font-bold bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text inline-block ">
+                class="text-5xl font-bold bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text inline-block ">
                 Advanced Exploration Tools</h1>
-            <p class="text-gray-400 font-semibold mt-4 text-xl">Powerful features designed for both casual explorers and
+            <p class="text-gray-400 font-semibold mt-4 text-xl w-10/12 m-auto">Powerful features designed for both
+                casual explorers and
                 professional researchers to analyze and interact
                 with space data.</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="bg-card-2  border-1 border-gray-700 p-7 mt-4 rounded-2xl !text-left">
-                    <h1 class="text-2xl font-bold text-blue-400 align-middle">Infinite Zoom Technology</h1>
-                    <p class="text-gray-300 font-semibold mt-4">Experience seamless zooming from planetary scale down to
-                        meter-level detail with our advanced tiling
-                        system.</p>
-                    <div class="mt-4">
-                        <p class="text-gray-400 pl-2">Gigapixel image rendering</p>
-                        <p class="text-gray-400 pl-2">Real-time performance optimization</p>
-                        <p class="text-gray-400 pl-2">Progressive loading</p>
-                    </div>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-4">
 
-                <div class="bg-card-2  border-1 border-gray-700 p-7 mt-4 rounded-2xl !text-left">
-                    <h1 class="text-2xl font-bold text-purple-400 align-middle">AI-Powered Search</h1>
-                    <p class="text-gray-300 font-semibold mt-4">Use natural language to find specific features,
-                        locations, and phenomena across our entire
-                        dataset.</p>
-                    <div class="mt-4">
-                        <p class="text-gray-400 pl-2">Natural language queries</p>
-                        <p class="text-gray-400 pl-2">Feature recognition</p>
-                        <p class="text-gray-400 pl-2">Smart recommendations</p>
+                <div>
+
+                    <div class="bg-card-2  border-1 border-gray-700 p-7 mt-4 rounded-2xl !text-left">
+                        <div class="flex items-center">
+                            <div class="bg-gradient-to-r to-blue-500 from-blue-400 text-xl  rounded-full p-3 mr-4">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                            <h1 class="text-2xl font-bold text-blue-400 align-middle">Infinite Zoom Technology</h1>
+                        </div>
+                        <p class="text-gray-300 font-semibold mt-4">Experience seamless zooming from planetary scale
+                            down to
+                            meter-level detail with our advanced tiling
+                            system.</p>
+                        <div class="mt-4">
+                            <p class="text-gray-400 pl-2"><i
+                                    class="fa-solid fa-check text-green-500 mr-2 "></i>Gigapixel image rendering</p>
+                            <p class="text-gray-400 pl-2"><i
+                                    class="fa-solid fa-check text-green-500 mr-2 "></i>Real-time performance
+                                optimization</p>
+                            <p class="text-gray-400 pl-2"><i
+                                    class="fa-solid fa-check text-green-500 mr-2 "></i>Progressive loading</p>
+                        </div>
                     </div>
+
+                    <div class="bg-card-2  border-1 border-gray-700 p-7 mt-4 rounded-2xl !text-left">
+                        <div class="flex items-center">
+                            <div class="bg-gradient-to-r to-purple-500 from-purple-400 text-xl  rounded-full p-3 mr-4">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <h1 class="text-2xl font-bold text-purple-400 align-middle">AI-Powered Search</h1>
+                        </div>
+                        <p class="text-gray-300 font-semibold mt-4">Use natural language to find specific features,
+                            locations, and phenomena across our entire
+                            dataset.</p>
+                        <div class="mt-4">
+                            <p class="text-gray-400 pl-2"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Natural
+                                language queries</p>
+                            <p class="text-gray-400 pl-2"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Feature
+                                recognition</p>
+                            <p class="text-gray-400 pl-2"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Smart
+                                recommendations</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div
+                    class="flex justify-center items-center bg-card-2 border-1 border-gray-700 rounded-2xl p-7 h-10/12">
+                    <img src="img/SpaceDashboard.png" alt="" class="rounded-xl w-full h-full">
                 </div>
             </div>
 
@@ -226,20 +286,33 @@
     <!-- Time-Based Section -->
     <section class="bg-firstSection py-10">
         <div class="container">
-            <h2 class=" bg-text from-yellow-500 to-orange-500 font-bold text-4xl">Time-Based Analysis</h2>
-            <p class="text-gray-300 font-semibold mt-4 text-xl">Compare the same locations across different time periods
+            <h2 class=" bg-text from-yellow-500 to-orange-500 font-bold text-6xl">Time-Based Analysis</h2>
+            <p class="text-gray-300 font-semibold mt-7 text-xl w-10/12 m-auto">Compare the same locations across
+                different time periods
                 and observe changes in planetary surfaces, weather patterns, and cosmic events.</p>
-            <div class="bg-card-2  rounded-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-7 p-7">
+            <div class="bg-card-2  rounded-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20 p-7">
                 <div class="text-center">
-                    <h3 class="bg-text bg-yellow-500 font-semibold text-xl">Temporal Comparison</h3>
+                    <div
+                        class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-2xl rounded-full w-16 h-16 m-auto flex justify-center items-center mb-4">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="bg-text bg-yellow-500 font-bold text-xl">Temporal Comparison</h3>
                     <p class="text-gray-300">Compare images taken years apart to observe planetary changes</p>
                 </div>
                 <div class="text-center">
-                    <h3 class="bg-text bg-green-500 font-semibold text-xl  mt-4 md:mt-0">Multi-Spectral Overlay</h3>
+                    <div
+                        class="bg-gradient-to-r from-green-400 to-green-600 text-2xl rounded-full w-16 h-16 m-auto flex justify-center items-center mb-4">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="bg-text bg-green-500 font-bold text-xl  mt-4 md:mt-0">Multi-Spectral Overlay</h3>
                     <p class="text-gray-300">Layer different wavelengths to reveal hidden features</p>
                 </div>
                 <div class="text-center">
-                    <h3 class="bg-text bg-purple-500 font-semibold text-xl mt-4 lg:mt-0">Data Analytics</h3>
+                    <div
+                        class="bg-gradient-to-r from-purple-400 to-blue-400 text-2xl rounded-full w-16 h-16 m-auto flex justify-center items-center mb-4">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="bg-text bg-purple-400 font-bold text-xl mt-4 lg:mt-0">Data Analytics</h3>
                     <p class="text-gray-300">Analyze trends and patterns with built-in measurement tools</p>
                 </div>
             </div>
@@ -247,53 +320,78 @@
     </section>
 
     <!-- Professional Section  -->
-    <section class="bg-secondSection py-10">
+    <section class="bg-secondSection py-20">
         <div class="container">
 
-            <h2 class=" from-blue-400 to-blue-500 bg-text text-4xl font-bold">Professional Research Suite</h2>
-            <p class="text-gray-300 mt-4 font-semibold text-xl ">Advanced tools for scientists, researchers, and
+            <h2 class=" from-blue-400 to-blue-500 bg-text text-5xl font-bold">Professional Research Suite</h2>
+            <p class="text-gray-300 mt-7 font-semibold text-xl w-10/12 m-auto ">Advanced tools for scientists,
+                researchers, and
                 educators to conduct detailed analysis and create educational
                 content.</p>
 
-            <div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
-                <div class="bg-card-2 !text-left p-7 rounded-2xl  hover:shadow-2xl duration-500 hover:-translate-y-1">
+            <div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 ">
+                <div class="bg-card-2 !text-left p-7 rounded-2xl  hover:shadow-2xl duration-500 hover:-translate-y-1  ">
+                    <div
+                        class="bg-gradient-to-r from-blue-400 to-blue-500 text-3xl rounded-full w-16 h-16  flex justify-center items-center mb-4 ">
+                        <i class="fa-solid fa-ruler"></i>
+                    </div>
                     <h2 class="bg-text font-bold text-2xl from-blue-300 to-blue-400 ">Measurement Tools</h2>
-                    <p class="mt-4 text-gray-300 font-semibold text-xl">Precise distance, area, and volume calculations
+                    <p class="mt-4 text-gray-300 font-semibold ">Precise distance, area, and volume calculations
                         with
                         coordinate system support.</p>
 
                     <div class="mt-4">
-                        <p class="text-gray-400">Distance measurement</p>
-                        <p class="text-gray-400">Area calculation</p>
-                        <p class="text-gray-400">Elevation profiling</p>
-                        <p class="text-gray-400">Coordinate systems</p>
+                        <p class="text-gray-400"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Distance
+                            measurement</p>
+                        <p class="text-gray-400"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Area calculation
+                        </p>
+                        <p class="text-gray-400"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Elevation
+                            profiling</p>
+                        <p class="text-gray-400"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Coordinate
+                            systems</p>
                     </div>
                 </div>
 
                 <div class="bg-card-2 !text-left p-7 rounded-2xl  hover:shadow-2xl duration-500 hover:-translate-y-1">
+                    <div
+                        class="bg-gradient-to-r from-purple-400 to-purple-500 text-3xl rounded-full w-16 h-16  flex justify-center items-center mb-4 ">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
                     <h2 class="bg-text font-bold text-2xl from-purple-400 to-purple-500 ">Annotation System</h2>
-                    <p class="mt-4 text-gray-300 font-semibold text-xl">Label features, create notes, and collaborate
+                    <p class="mt-4 text-gray-300 font-semibold ">Label features, create notes, and collaborate
                         with other researchers.</p>
 
                     <div class="mt-4">
-                        <p class="text-gray-400">Feature labeling</p>
-                        <p class="text-gray-400">Collaborative notes</p>
-                        <p class="text-gray-400">Export annotations</p>
-                        <p class="text-gray-400">Version control</p>
+                        <p class="text-gray-400"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Feature labeling
+                        </p>
+                        <p class="text-gray-400"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Collaborative
+                            notes</p>
+                        <p class="text-gray-400"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Export
+                            annotations</p>
+                        <p class="text-gray-400"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Version control
+                        </p>
                     </div>
                 </div>
 
 
                 <div class="bg-card-2 !text-left p-7 rounded-2xl  hover:shadow-2xl duration-500 hover:-translate-y-1">
+                    <div
+                        class="bg-gradient-to-r from-green-400 to-green-500 text-3xl rounded-full w-16 h-16  flex justify-center items-center mb-4 ">
+                        <i class="fa-solid fa-file-export"></i>
+                    </div>
                     <h2 class="bg-text font-bold text-2xl from-green-400 to-green-500 ">Data Export</h2>
-                    <p class="mt-4 text-gray-300 font-semibold text-xl">Download high-resolution sections and metadata
+                    <p class="mt-4 text-gray-300 font-semibold ">Download high-resolution sections and metadata
                         for external analysis.</p>
 
                     <div>
-                        <p class="text-gray-400">Custom resolution</p>
-                        <p class="text-gray-400">Multiple formats</p>
-                        <p class="text-gray-400">Metadata inclusion</p>
-                        <p class="text-gray-400">Batch processing</p>
+                        <p class="text-gray-400"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Custom resolution
+                        </p>
+                        <p class="text-gray-400"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Multiple formats
+                        </p>
+                        <p class="text-gray-400"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Metadata
+                            inclusion</p>
+                        <p class="text-gray-400"><i class="fa-solid fa-check text-green-500 mr-2 "></i>Batch processing
+                        </p>
                     </div>
                 </div>
             </div>
@@ -303,9 +401,9 @@
     <!-- Mission Archives Section  -->
     <section class="bg-firstSection py-10">
         <div class="container">
-
-            <h1 class="bg-text from-orange-400 to-orange-500 font-bold text-4xl">Mission Archives</h1>
-            <p class="text-xl text-gray-300 font-semibold mt-4  ">Explore data from NASA's most significant space
+            <h1 class="bg-text from-orange-400 to-orange-500 font-bold text-5xl">Mission Archives</h1>
+            <p class="text-xl text-gray-300 font-semibold mt-4 w-10/12 m-auto  ">Explore data from NASA's most
+                significant space
                 missions, from historic Apollo landings to cutting-edge
                 Mars
                 exploration.</p>
@@ -315,7 +413,7 @@
                 <div
                     class="bg-card-2 !text-left rounded-2xl  overflow-hidden hover:shadow-2xl duration-500 hover:-translate-y-1 relative">
                     <div class="relative w-full h-50 ">
-                        <img src="img/Earth.jpg" alt="..." class="w-full h-full">
+                        <img src="img/ManSpace.png" alt="..." class="w-full h-full">
                         <p class="absolute font-semibold bg-yellow-600 bottom-4 left-4  rounded-2xl text-sm px-3 py-1">
                             Historic Mission</p>
                     </div>
@@ -333,7 +431,7 @@
                 <div
                     class="bg-card-2 !text-left rounded-2xl  overflow-hidden hover:shadow-2xl duration-500 hover:-translate-y-1 relative">
                     <div class="relative w-full h-50 ">
-                        <img src="img/Earth.jpg" alt="..." class="w-full h-full">
+                        <img src="img/Reboot.jpg" alt="..." class="w-full h-full">
                         <p class="absolute font-semibold bg-red-600 bottom-4 left-4  rounded-2xl text-sm px-3 py-1">
                             Active Mission</p>
                     </div>
@@ -353,7 +451,7 @@
                 <div
                     class="bg-card-2 !text-left rounded-2xl  overflow-hidden hover:shadow-2xl duration-500 hover:-translate-y-1 relative">
                     <div class="relative w-full h-50 ">
-                        <img src="img/Earth.jpg" alt="..." class="w-full h-full">
+                        <img src="img/Space.png" alt="..." class="w-full h-full">
                         <p class="absolute font-semibold bg-purple-600 bottom-4 left-4  rounded-2xl text-sm px-3 py-1">
                             Observatory</p>
                     </div>
@@ -376,16 +474,23 @@
     <section class="bg-secondSection py-10">
         <div class="container ">
             <h1 class="bg-text from-emerald-400 to-cyan-400 font-bold text-5xl  ">Educational Resources</h1>
-            <p class="text-gray-300 font-semibold text-xl mt-4">Comprehensive learning materials for students,
+            <p class="text-gray-300 font-semibold text-xl mt-4 w-10/12 m-auto">Comprehensive learning materials for
+                students,
                 educators, and space enthusiasts of all levels.</p>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 !text-left py-5">
 
                 <div class="grid grid-cols-1 gap-7">
                     <div class="bg-card-2 rounded-2xl border-1 border-gray-700 px-7 py-4 ">
-                        <div>
-                            <h3 class="text-2xl text-blue-400 font-bold ">Interactive Tutorials</h3>
-                            <p class="mt-1 text-gray-500">Step-by-step guides for exploration</p>
+                        <div class="flex">
+                            <div
+                                class="bg-gradient-to-r from-blue-400 to-blue-500 text-xl  rounded-full px-4 flex items-center mr-4">
+                                <i class="fa-solid fa-graduation-cap text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl text-blue-400 font-bold ">Interactive Tutorials</h3>
+                                <p class="mt-1 text-gray-500">Step-by-step guides for exploration</p>
+                            </div>
                         </div>
                         <p class="text-gray-300 mt-2">Learn how to navigate, analyze, and interpret space imagery with
                             our comprehensive tutorial
@@ -396,9 +501,15 @@
 
 
                     <div class="bg-card-2 rounded-2xl border-1 border-gray-700 px-7 py-4 ">
-                        <div>
-                            <h3 class="text-2xl text-green-400 font-bold ">Lesson Plans</h3>
-                            <p class="mt-1 text-gray-500">Ready-made curriculum for educators</p>
+                        <div class="flex">
+                            <div
+                                class="bg-gradient-to-r from-green-400 to-green-500 text-xl  rounded-full px-4 flex items-center mr-4">
+                                <i class="fa-solid fa-book text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl text-green-400 font-bold ">Lesson Plans</h3>
+                                <p class="mt-1 text-gray-500">Ready-made curriculum for educators</p>
+                            </div>
                         </div>
                         <p class="text-gray-300 mt-2">Download classroom-ready materials aligned with educational
                             standards for K-12 and university
@@ -408,9 +519,15 @@
 
 
                     <div class="bg-card-2 rounded-2xl border-1 border-gray-700 px-7 py-4 ">
-                        <div>
-                            <h3 class="text-2xl text-purple-400 font-bold ">Community Projects</h3>
-                            <p class="mt-1 text-gray-500">Collaborative research initiatives</p>
+                        <div class="flex">
+                            <div
+                                class="bg-gradient-to-r from-purple-400 to-purple-500 text-xl  rounded-full px-4 flex items-center mr-4">
+                                <i class="fa-solid fa-users text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl text-purple-400 font-bold ">Community Projects</h3>
+                                <p class="mt-1 text-gray-500">Collaborative research initiatives</p>
+                            </div>
                         </div>
                         <p class="text-gray-300 mt-2">Join citizen science projects and contribute to real NASA research
                             while learning about space
@@ -424,7 +541,7 @@
                     </div>
 
                     <div
-                        class="absolute right-0 bottom-0 p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl w-7/12 translate-x-20">
+                        class="  absolute right-0 bottom-0 p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl w-7/12 md:translate-x-15">
                         <h4 class="font-blod text-xl"> Join 50,000+ Educators</h4>
                         <p class="mt-2 text-gray-300">Already using our platform for space science education</p>
                     </div>
@@ -518,8 +635,8 @@
     <footer class="bg-card border-t-1 border-gray-700 py-10">
         <div class="container !text-left">
 
-            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5">
-                <div class="flex flex-col">
+            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5 items-center gap-10">
+                <div class="flex flex-col ">
                     <div class="logo flex  items-center">
                         <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-xl  rounded-full p-2">
                             <i class="fa-solid fa-rocket "></i>
@@ -530,10 +647,23 @@
                     </div>
                     <p class="text-gray-300 font-semibold mt-4 ">Democratizing access to NASA's vast collection of space
                         imagery through innovative web technology and intuitive user interfaces.</p>
-                    <div class="linkes flex mt-4"></div>
+                    <div class="linkes flex mt-4">
+                        <div class="mr-4 bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <div  class="mr-4 bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div  class="mr-4 bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <div  class=" bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="m-auto">
+                <div class="md:m-auto">
                     <h4 class="font-bold text-xl">Explore</h4>
                     <ul class="mt-4">
                         <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
@@ -553,7 +683,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="m-auto">
+                <div class="md:m-auto">
                     <h4 class="font-bold text-xl">Resources</h4>
                     <ul class="mt-4">
                         <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">

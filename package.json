@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -11,10 +10,11 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.13",
     "tailwindcss": "^4.1.13"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "aos": "^2.3.4"
   }
-,"scripts": {
-"build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
-}
-
-
 }

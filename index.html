@@ -13,6 +13,12 @@
 
     <!-- Tailwind cdn -->
     <link href="dist/output.css" rel="stylesheet">
+
+    <!-- AOS cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    
 </head>
 
 <body class="bg-firstSection text-white">
@@ -31,8 +37,8 @@
         <div class="ml-20">
             <nav class=" hidden lg:!flex ">
                 <ul class="flex space-x-6">
-                    <li class=""><a href="" class="hover:text-blue-600 font-semibold duration-300">Home</a></li>
-                    <li class=""><a href="" class="hover:text-blue-600 font-semibold duration-300">Explore</a></li>
+                    <li class=""><a href="index.html" class="hover:text-blue-600 font-semibold duration-300">Home</a></li>
+                    <li class=""><a href="explorerPage.html" class="hover:text-blue-600 font-semibold duration-300">Explore</a></li>
                     <li class=""><a href="" class="hover:text-blue-600 font-semibold duration-300">Compare</a></li>
                     <li class=""><a href="" class="hover:text-blue-600 font-semibold duration-300">About</a></li>
                 </ul>
@@ -50,7 +56,7 @@
 
     <!-- Main Section  -->
     <section
-        class="relative text-center lg:min-h-screen bg-[url('/img/bg.png')] bg-no-repeat bg-cover bg-center flex items-center justify-center">
+        class="relative text-center lg:min-h-screen bg-[url('/img/bg.png')] bg-no-repeat bg-cover bg-center flex items-center justify-center fade-">
 
         <!-- Overlay -->
         <div class="absolute inset-0 bg-gray-500/20"></div>
@@ -105,7 +111,7 @@
 
 
     <!-- Explore Section -->
-    <section class="text-center py-10  bg-firstSection">
+    <section data-aos="fade-up" class="text-center py-10  bg-firstSection">
         <div class="container ">
             <h1
                 class="text-5xl bg-gradient-to-r from-blue-500 to-purple-500 text-transparent  bg-clip-text  inline-block font-bold ">
@@ -216,7 +222,7 @@
 
 
     <!-- Advanced Tools Section  -->
-    <section class="bg-secondSection py-10 ">
+    <section data-aos="fade-up" class="bg-secondSection py-10 ">
         <div class="container">
 
             <h1
@@ -227,11 +233,11 @@
                 professional researchers to analyze and interact
                 with space data.</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-4 " >
 
                 <div>
 
-                    <div class="bg-card-2  border-1 border-gray-700 p-7 mt-4 rounded-2xl !text-left">
+                    <div class="bg-card-2  border-1 border-gray-700 p-7 mt-4 rounded-2xl !text-left" data-aos="fade-right">
                         <div class="flex items-center">
                             <div class="bg-gradient-to-r to-blue-500 from-blue-400 text-xl  rounded-full p-3 mr-4">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -253,7 +259,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-card-2  border-1 border-gray-700 p-7 mt-4 rounded-2xl !text-left">
+                    <div class="bg-card-2  border-1 border-gray-700 p-7 mt-4 rounded-2xl !text-left" data-aos="fade-right">
                         <div class="flex items-center">
                             <div class="bg-gradient-to-r to-purple-500 from-purple-400 text-xl  rounded-full p-3 mr-4">
                                 <i class="fa-solid fa-robot"></i>
@@ -274,7 +280,7 @@
                     </div>
 
                 </div>
-                <div
+                <div data-aos="fade-left"
                     class="flex justify-center items-center bg-card-2 border-1 border-gray-700 rounded-2xl p-7 h-10/12">
                     <img src="img/SpaceDashboard.png" alt="" class="rounded-xl w-full h-full">
                 </div>
@@ -284,7 +290,7 @@
     </section>
 
     <!-- Time-Based Section -->
-    <section class="bg-firstSection py-10">
+    <section class="bg-firstSection py-10" data-aos="fade-down">
         <div class="container">
             <h2 class=" bg-text from-yellow-500 to-orange-500 font-bold text-6xl">Time-Based Analysis</h2>
             <p class="text-gray-300 font-semibold mt-7 text-xl w-10/12 m-auto">Compare the same locations across
@@ -320,7 +326,7 @@
     </section>
 
     <!-- Professional Section  -->
-    <section class="bg-secondSection py-20">
+    <section class="bg-secondSection py-20" data-aos="fade-up">
         <div class="container">
 
             <h2 class=" from-blue-400 to-blue-500 bg-text text-5xl font-bold">Professional Research Suite</h2>
@@ -399,7 +405,7 @@
     </section>
 
     <!-- Mission Archives Section  -->
-    <section class="bg-firstSection py-10">
+    <section class="bg-firstSection py-10" data-aos="fade-up">
         <div class="container">
             <h1 class="bg-text from-orange-400 to-orange-500 font-bold text-5xl">Mission Archives</h1>
             <p class="text-xl text-gray-300 font-semibold mt-4 w-10/12 m-auto  ">Explore data from NASA's most
@@ -478,7 +484,7 @@
                 students,
                 educators, and space enthusiasts of all levels.</p>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 !text-left py-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 !text-left py-5" data-aos="fade-right">
 
                 <div class="grid grid-cols-1 gap-7">
                     <div class="bg-card-2 rounded-2xl border-1 border-gray-700 px-7 py-4 ">
@@ -500,7 +506,7 @@
 
 
 
-                    <div class="bg-card-2 rounded-2xl border-1 border-gray-700 px-7 py-4 ">
+                    <div class="bg-card-2 rounded-2xl border-1 border-gray-700 px-7 py-4 " data-aos="fade-right">
                         <div class="flex">
                             <div
                                 class="bg-gradient-to-r from-green-400 to-green-500 text-xl  rounded-full px-4 flex items-center mr-4">
@@ -518,7 +524,7 @@
                     </div>
 
 
-                    <div class="bg-card-2 rounded-2xl border-1 border-gray-700 px-7 py-4 ">
+                    <div class="bg-card-2 rounded-2xl border-1 border-gray-700 px-7 py-4 " data-aos="fade-right">
                         <div class="flex">
                             <div
                                 class="bg-gradient-to-r from-purple-400 to-purple-500 text-xl  rounded-full px-4 flex items-center mr-4">
@@ -535,13 +541,13 @@
                     </div>
                 </div>
 
-                <div class="relative flex items-center">
-                    <div class="bg-card-2 rounded-2xl border-1 border-gray-700 p-7  h-10/12 w-full ">
+                <div class="relative flex items-center" > 
+                    <div class="bg-card-2 rounded-2xl border-1 border-gray-700 p-7  h-10/12 w-full " data-aos="fade-left">
                         <img src="img/Earth.jpg" alt="..." class="rounded-xl w-full h-full">
                     </div>
 
                     <div
-                        class="  absolute right-0 bottom-0 p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl w-7/12 md:translate-x-15">
+                         data-aos="fade-down" class="  absolute right-0 bottom-0 p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl w-7/12 md:translate-x-15">
                         <h4 class="font-blod text-xl"> Join 50,000+ Educators</h4>
                         <p class="mt-2 text-gray-300">Already using our platform for space science education</p>
                     </div>
@@ -651,13 +657,13 @@
                         <div class="mr-4 bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
                             <i class="fa-brands fa-twitter"></i>
                         </div>
-                        <div  class="mr-4 bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
+                        <div class="mr-4 bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
                             <i class="fa-brands fa-facebook"></i>
                         </div>
-                        <div  class="mr-4 bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
+                        <div class="mr-4 bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </div>
-                        <div  class=" bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
+                        <div class=" bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
                             <i class="fa-brands fa-youtube"></i>
                         </div>
                     </div>
@@ -712,7 +718,15 @@
 
 
 
+    <!-- AOS Library  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script>
+        AOS.init({
+            duration: 1000, // مدة الأنيميشن (1 ثانية)
+            once: true      // يشتغل مرة واحدة بس
+        });
+    </script>
 </body>
 
 </html>

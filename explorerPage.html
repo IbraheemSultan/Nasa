@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa Explorer</title>
+
+    <!-- Fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind cdn -->
+    <link href="dist/output.css" rel="stylesheet">
+
+    <!-- AOS cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="text-white">
+    <!-- Header -->
+    <header
+        class="w-full md:w-11/12 md:rounded-b-4xl m-auto h-20 bg-header flex items-center justify-between    px-6 absolute md:left-1/24 z-50">
+        <div class="logo flex justify-between items-center">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-xl  rounded-full p-2">
+                <i class="fa-solid fa-rocket "></i>
+            </div>
+            <span
+                class="font-bold text-xl uppercase ml-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent   ">NASA
+                Explorer </span>
+        </div>
+        <div class="ml-20">
+            <nav class=" hidden lg:!flex ">
+                <ul class="flex space-x-6">
+                    <li class=""><a href="index.html" class="hover:text-blue-600 font-semibold duration-300">Home</a></li>
+                    <li class=""><a href="explorerPage.html" class="hover:text-blue-600 font-semibold duration-300">Explore</a></li>
+                    <li class=""><a href="" class="hover:text-blue-600 font-semibold duration-300">Compare</a></li>
+                    <li class=""><a href="" class="hover:text-blue-600 font-semibold duration-300">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search relative hidden md:!flex ">
+            <i class="fa-solid fa-magnifying-glass absolute  top-2 text-gray-400 left-0 px-4 py-1 rounded-2xl "></i>
+            <input type="search" placeholder="Search..."
+                class="rounded-4xl px-10 py-2  text-sm border-1 border-gray-500 outline-0 focus:outline-none focus:border-blue-500">
+        </div>
+
+        <!-- Sultan: i will turn on menu later by js -->
+        <i class="fa-solid fa-bars lg:!hidden "></i>
+    </header>
+    <!-- End Header -->
+    
+    <section class="h-[calc(100vh-5rem)] w-full flex">
+        <div class="relative" >
+            <img src="" alt="">
+            
+        </div>
+
+    </section>
+
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000, // مدة الأنيميشن (1 ثانية)
+            once: true      // يشتغل مرة واحدة بس
+        });
+    </script>
+</body>
+
+</html>

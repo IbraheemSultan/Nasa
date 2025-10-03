@@ -1,72 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasa Explorer</title>
+    <title>NASA Explorer</title>
 
-    <!-- Fontawesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Tailwind cdn -->
+    <!-- Tailwind CSS (assuming you have it compiled in dist/output.css) -->
     <link href="dist/output.css" rel="stylesheet">
 
-    <!-- AOS cdn -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
-<body class="text-white">
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body class="text-white bg-gray-900">
     <!-- Header -->
-    <header
-        class="w-full md:w-11/12 md:rounded-b-4xl m-auto h-20 bg-header flex items-center justify-between    px-6 absolute md:left-1/24 z-50">
+    <header class="w-full m-auto h-20 bg-header flex items-center justify-between px-6 z-50">
         <div class="logo flex justify-between items-center">
-            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-xl  rounded-full p-2">
-                <i class="fa-solid fa-rocket "></i>
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-xl rounded-full p-2">
+                <i class="fa-solid fa-rocket"></i>
             </div>
-            <span
-                class="font-bold text-xl uppercase ml-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent   ">NASA
-                Explorer </span>
+            <span class="font-bold text-xl uppercase ml-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">NASA Explorer</span>
         </div>
         <div class="ml-20">
-            <nav class=" hidden lg:!flex ">
+            <nav class="hidden lg:!flex">
                 <ul class="flex space-x-6">
-                    <li class=""><a href="index.html" class="hover:text-blue-600 font-semibold duration-300">Home</a></li>
-                    <li class=""><a href="explorerPage.html" class="hover:text-blue-600 font-semibold duration-300">Explore</a></li>
-                    <li class=""><a href="" class="hover:text-blue-600 font-semibold duration-300">Compare</a></li>
-                    <li class=""><a href="" class="hover:text-blue-600 font-semibold duration-300">About</a></li>
+                    <li><a href="index.html" class="hover:text-blue-600 font-semibold duration-300">Home</a></li>
+                    <li><a href="explorerPage.html" class="hover:text-blue-600 font-semibold duration-300">Explore</a></li>
+                    <li><a href="" class="hover:text-blue-600 font-semibold duration-300">Compare</a></li>
+                    <li><a href="" class="hover:text-blue-600 font-semibold duration-300">About</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="search relative hidden md:!flex ">
-            <i class="fa-solid fa-magnifying-glass absolute  top-2 text-gray-400 left-0 px-4 py-1 rounded-2xl "></i>
-            <input type="search" placeholder="Search..."
-                class="rounded-4xl px-10 py-2  text-sm border-1 border-gray-500 outline-0 focus:outline-none focus:border-blue-500">
+        <div class="search relative hidden md:!flex">
+            <i class="fa-solid fa-magnifying-glass absolute top-2 text-gray-400 left-0 px-4 py-1 rounded-2xl"></i>
+            <input type="search" placeholder="Search..." class="rounded-4xl px-10 py-2 text-sm border-1 border-gray-500 outline-0 focus:outline-none focus:border-blue-500">
         </div>
-
-        <!-- Sultan: i will turn on menu later by js -->
-        <i class="fa-solid fa-bars lg:!hidden "></i>
+        <i class="fa-solid fa-bars lg:!hidden"></i>
     </header>
     <!-- End Header -->
-    
-    <section class="h-[calc(100vh-5rem)] w-full flex">
-        <div class="relative" >
-            <img src="" alt="">
-            
-        </div>
 
+    <!-- Map Section -->
+    <section class="h-[calc(100vh-5rem)] w-full flex">
+        <div class="relative w-full h-full">
+            <!-- Leaflet Map Container -->
+            <div id="map" class="w-full h-full"></div>
+            <!-- Custom Controls -->
+            <div class="controlImg absolute top-10 left-10 flex flex-col space-y-4 z-[1000]">
+                <div id="zoom-in" class="w-12 h-12 cursor-pointer hover:bg-gray-600 duration-500 rounded-xl flex items-center justify-center bg-gray-800">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div id="zoom-out" class="w-12 h-12 cursor-pointer hover:bg-gray-600 duration-500 rounded-xl flex items-center justify-center bg-gray-800">
+                    <i class="fa-solid fa-minus"></i>
+                </div>
+                <div id="reset-view" class="w-12 h-12 cursor-pointer hover:bg-gray-600 duration-500 rounded-xl flex items-center justify-center bg-gray-800">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+            </div>
+        </div>
     </section>
 
-     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Leaflet.js Script -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
+        // Initialize AOS
         AOS.init({
-            duration: 1000, // مدة الأنيميشن (1 ثانية)
-            once: true      // يشتغل مرة واحدة بس
+            duration: 1000,
+            once: true
+        });
+
+        // Initialize Leaflet Map
+        const map = L.map('map', {
+            crs: L.CRS.Simple, // Use simple coordinate system for image
+            minZoom: -2,
+            maxZoom: 2,
+             zoomControl: false // 🚀 يخفي أزرار الزوم الافتراضية
+        });
+
+        // Image dimensions (replace with your image's actual dimensions)
+        const imageUrl = 'https://proxy-eu-central1.goorm.io/service/68dfaec4924ab3d9c59837e9_dWL1TmzmtuJs5WyKcsT.run-eu-central1.goorm.io/9080/file/load/output.png?path=d29ya3NwYWNlJTJGZWYlMkZvdXRwdXQucG5n&docker_id=dWL1TmzmtuJs5WyKcsT&secure_session_id=Tu1aReWEp7P0gA8KV8U2AbzeQjkMSI_f'; // Replace with your hosted MRO image
+        const imageWidth = 2000; // Replace with actual width of your image
+        const imageHeight = 2000; // Replace with actual height of your image
+
+        // Define image bounds
+        const bounds = [[0, 0], [imageHeight, imageWidth]];
+        L.imageOverlay(imageUrl, bounds).addTo(map);
+
+        // Fit the map to the image bounds
+        map.fitBounds(bounds);
+
+        // Add labels (example: add markers with labels for points of interest)
+        const labels = [
+            { lat: imageHeight * 0.3, lng: imageWidth * 0.4, text: 'Crater Alpha' },
+            { lat: imageHeight * 0.6, lng: imageWidth * 0.7, text: 'Volcano Beta' }
+        ];
+
+        labels.forEach(label => {
+            L.marker([label.lat, label.lng])
+                .addTo(map)
+                .bindPopup(label.text)
+                .openPopup();
+        });
+
+        // Custom zoom controls
+        document.getElementById('zoom-in').addEventListener('click', () => {
+            map.zoomIn();
+        });
+
+        document.getElementById('zoom-out').addEventListener('click', () => {
+            map.zoomOut();
+        });
+
+        document.getElementById('reset-view').addEventListener('click', () => {
+            map.fitBounds(bounds);
         });
     </script>
 </body>
-
 </html>
+

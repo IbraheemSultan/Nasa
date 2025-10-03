@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nasa Explorer</title>
+
+  <!-- Tailwind -->
+  <link href="dist/output.css" rel="stylesheet">
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <style>
+    #map {
+      height: calc(100vh - 5rem);
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="text-white">
+  <!-- Header -->
+  <header class="w-full h-20 bg-header flex items-center justify-between px-6 z-50">
+    <div class="logo flex items-center">
+      <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-xl rounded-full p-2">
+        <i class="fa-solid fa-rocket"></i>
+      </div>
+      <span class="font-bold text-xl uppercase ml-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">NASA
+        Explorer</span>
+    </div>
+  </header>
+
+  <!-- Map Section -->
+  <section>
+    <div id="map"></div>
+  </section>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    // عمل ماب فارغة
+    var map = L.map('map', {
+      crs: L.CRS.Simple, // عشان صورة مش GIS
+      minZoom: -2
+    });
+
+    // هنا تحط لينك الصورة من موقع NASA أو محلية
+    var imageUrl = 'https://proxy-eu-central1.goorm.io/service/68dfaec4924ab3d9c59837e9_dWL1TmzmtuJs5WyKcsT.run-eu-central1.goorm.io/9080/file/load/output.png?path=d29ya3NwYWNlJTJGZWYlMkZvdXRwdXQucG5n&docker_id=dWL1TmzmtuJs5WyKcsT&secure_session_id=Tu1aReWEp7P0gA8KV8U2AbzeQjkMSI_f'; 
+    // لازم تختار صورة JPG أو PNG (لو TIFF لازم تحويلها)
+
+    // بنحدد حجم الصورة (مؤقت 4000x2000 - غير على حسب الصورة)
+    var imageBounds = [[0, 0], [2000, 4000]];
+    L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+    // fit image to map view
+    map.fitBounds(imageBounds);
+
+    // إضافة Label (Marker)
+    L.marker([1000, 2000]).addTo(map)
+      .bindPopup("<b>Mars Point</b><br>This is a label.")
+      .openPopup(); map
+  </script>
+</body>
+
+</html>

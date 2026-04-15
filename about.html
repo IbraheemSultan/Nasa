@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Nasa Explorer</title>
+
+    <!-- Fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind cdn -->
+    <link href="dist/output.css" rel="stylesheet">
+
+    <!-- AOS cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body class="bg-firstSection text-white flex flex-col min-h-screen">
+
+    <!-- header -->
+    <header class="w-full m-auto h-20 bg-header flex items-center justify-between px-6 z-50 relative">
+        <!-- Logo -->
+        <div class="logo flex items-center z-10">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-xl rounded-full p-2">
+                <i class="fa-solid fa-rocket "></i>
+            </div>
+            <span
+                class="font-bold text-xl uppercase ml-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">NASA
+                Explorer</span>
+        </div>
+
+        <!-- Center Nav -->
+        <div class="hidden lg:flex absolute inset-x-0 justify-center pointer-events-none z-0">
+            <nav class="pointer-events-auto">
+                <ul class="flex space-x-12 text-[17px]">
+                    <li><a href="index.html" class="hover:text-blue-500 font-semibold duration-300 transition-colors">Home</a></li>
+                    <li><a href="explorerPage.html" class="hover:text-blue-500 font-semibold duration-300 transition-colors">Explore</a></li>
+                    <li><a href="about.html" class="hover:text-blue-500 font-semibold duration-300 transition-colors">About</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <!-- <div class="z-10">
+            <i class="fa-solid fa-bars lg:hidden text-2xl cursor-pointer"></i>
+        </div> -->
+    </header>
+
+    <!-- Main About Section -->
+    <main class="flex-grow flex flex-col justify-center items-center py-12 md:py-20 px-4 sm:px-6" data-aos="fade-up">
+        <div class="max-w-5xl w-full bg-card border border-gray-700 rounded-3xl p-6 sm:p-10 md:p-16 shadow-2xl text-center">
+            <div class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-3xl md:text-4xl rounded-full p-5 md:p-6 text-white mb-6 md:mb-8 shadow-lg hover:scale-110 duration-300">
+                <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 md:mb-6 leading-tight">
+                About NASA Explorer
+            </h1>
+            
+            <p class="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-8 md:mb-10 w-full md:w-11/12 mx-auto">
+                Welcome to <span class="text-blue-400 font-bold">NASA Explorer</span>, an innovative educational platform designed to bring the universe to your fingertips. Built using the powerful <a href="https://gibs.earthdata.nasa.gov" target="_blank" class="text-purple-400 hover:text-purple-300 underline">NASA GIBS API</a>, this project provides seamless access to high-resolution satellite imagery.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 mt-8 md:mt-10">
+                <div class="bg-secondSection p-5 sm:p-6 md:p-8 rounded-2xl border border-gray-700 hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-900/30 duration-300">
+                    <i class="fa-solid fa-earth-americas text-3xl sm:text-4xl text-blue-400 mb-3 sm:mb-4"></i>
+                    <h3 class="text-lg sm:text-xl font-bold mb-2 text-gray-100">Observe</h3>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed">Explore interactive true-color maps of Earth and other celestial bodies.</p>
+                </div>
+                
+                <div class="bg-secondSection p-5 sm:p-6 md:p-8 rounded-2xl border border-gray-700 hover:-translate-y-2 hover:shadow-lg hover:shadow-red-900/30 duration-300">
+                    <i class="fa-solid fa-temperature-half text-3xl sm:text-4xl text-red-400 mb-3 sm:mb-4"></i>
+                    <h3 class="text-lg sm:text-xl font-bold mb-2 text-gray-100">Analyze</h3>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed">Dive deep into thermal data and multi-spectral analysis.</p>
+                </div>
+
+                <div class="bg-secondSection p-5 sm:p-6 md:p-8 rounded-2xl border border-gray-700 hover:-translate-y-2 hover:shadow-lg hover:shadow-yellow-900/30 duration-300 sm:col-span-2 md:col-span-1">
+                    <i class="fa-solid fa-lightbulb text-3xl sm:text-4xl text-yellow-400 mb-3 sm:mb-4"></i>
+                    <h3 class="text-lg sm:text-xl font-bold mb-2 text-gray-100">Discover</h3>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed">Witness phenomena like Earth at Night through VIIRS technology.</p>
+                </div>
+            </div>
+            
+            <div class="mt-10 md:mt-14 text-gray-500 text-xs sm:text-sm">
+                Developed dynamically as an interactive web experience. All images and data are sourced from NASA EOSDIS.
+            </div>
+            
+            <a href="explorerPage.html" class="inline-block mt-6 md:mt-8 text-lg sm:text-xl font-semibold rounded-full p-3 sm:p-4 px-8 sm:px-12 bg-gradient-to-r from-blue-600 to-purple-600 duration-500 hover:from-blue-700 hover:to-purple-700 text-white shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40 transform hover:-translate-y-1">
+                Start Exploring
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-card border-t-1 border-gray-700 py-10 mt-auto">
+        <div class="container !text-left">
+
+            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5 items-center gap-10">
+                <div class="flex flex-col ">
+                    <div class="logo flex  items-center">
+                        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-xl  rounded-full p-2">
+                            <i class="fa-solid fa-rocket "></i>
+                        </div>
+                        <span
+                            class="font-bold text-xl uppercase ml-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent   ">NASA
+                            Explorer </span>
+                    </div>
+                    <p class="text-gray-300 font-semibold mt-4 ">Democratizing access to NASA's vast collection of space
+                        imagery through innovative web technology and intuitive user interfaces.</p>
+                    <div class="linkes flex mt-4">
+                        <div class="mr-4 bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <div class="mr-4 bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="mr-4 bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <div class=" bg-gray-600 p-3 rounded-full duration-500 hover:bg-blue-600 cursor-pointer">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:m-auto">
+                    <h4 class="font-bold text-xl">Explore</h4>
+                    <ul class="mt-4">
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href="explorerPage.html"> Earth Observatory</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href="explorerPage.html"> Mars Surface</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href="explorerPage.html"> Lunar Missions</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href="explorerPage.html"> Deep Space</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href="explorerPage.html"> Solar System</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:m-auto">
+                    <h4 class="font-bold text-xl">Resources</h4>
+                    <ul class="mt-4">
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> API Documentation</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Educational Materials</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Research Papers</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Help Center</a>
+                        </li>
+                        <li class="text-gray-300 mt-2 font-semibold hover:text-blue-400 duration-500 cursor-pointer">
+                            <a href=""> Community Forum</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000, // مدة الأنيميشن (1 ثانية)
+            once: true      // يشتغل مرة واحدة بس
+        });
+    </script>
+</body>
+
+</html>
